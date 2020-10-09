@@ -17,23 +17,44 @@
 <body>
 <div class="container-fluid">
     {% include 'header.html' %}
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            {% block headmessage %}{% endblock %}
+    <div class="row">
+        <div class="col-sm-4 col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>
+                        MENU
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="list-group">
+                        <a href="http://wbaidu.com" class="list-group-item">百度</a>
+                        <a href="http://tar.so/news" class="list-group-item">实时新闻</a>
+                        <a href="http://drho.tw/news" class="list-group-item">电视新闻</a>
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-        <div class="panel-body">
-            {% block content %}{% endblock %}
+        <div class="col-sm-8 col=md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                                {% block headmessage %}{% endblock %}
+                </div>
+                <div class="panel-body">
+                    {% block content %} {% endblock %}
+                </div>
+                <div class="panel-footer">
+                     {% include 'footer.html' %}
+                </div>
+            </div>
+
         </div>
-        <div class="panel-footer">
-            {% include 'footer.html' %}
-        </div>
+
     </div>
+
 </div>
-
-
-<hr>
-
-<hr>
 
 <a href="https://info.flagcounter.com/6G4A"><img src="https://s11.flagcounter.com/count2/6G4A/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
 </body>
